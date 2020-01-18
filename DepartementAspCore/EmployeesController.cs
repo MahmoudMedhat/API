@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DepartementAspCore.Models;
 using DepartementAspCore.Models.DB;
+using Microsoft.AspNetCore.Cors;
 
 namespace DepartementAspCore
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("_myAllowSpecificOrigins")]
     public class EmployeesController : ControllerBase
     {
         private readonly ApplicationDBContextcs _context;
